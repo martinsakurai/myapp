@@ -1,11 +1,14 @@
-class Product{
+class User {
+  String email;
+  String contrasena;
+  String nombre;
+  String direccion;
 
-  String name;
-  int? price;
-
-  Product({required this.name, required this.price})
-
-  bool isFree(){
-    return price == 0;
-  }
+  User({
+    required this.email,
+    required this.contrasena,
+    required this.nombre,
+    required this.direccion,
+  });
 }
+

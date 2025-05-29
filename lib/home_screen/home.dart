@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/entities/prduct.dart';
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+import 'package:flutter_login/entities/users.dart';
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
+class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
 
-class _HomeScreenState extends State<HomeScreen> {
+  final User usuarioIngresado; // uso final ya que estamos en un Statless widget. Como StatelessWidget no cambia su estado, sus propiedades deberían ser final
+
+  const HomeScreen({super.key, required this.usuarioIngresado}); //aca se dice que se requiere el userName de la pantalla login, la variable esta declarada igual que en appRouter
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'Bienvenido, ${usuarioIngresado.nombre}, tu direccion es ${usuarioIngresado.direccion}', //utilizo solamente los atributos que necesito. Accedo a ellos gracias al "."
+          style: const TextStyle(fontSize: 24),
+        ),
+      ),
+    );
   }
 }
-Product myProduct = Product(name: "Ipone", price: 1000);
-Product secondProduct = Product(name: "Samsung");
-List<Product> products [
-
-]
-
-products.add(Product(name: "Nintendo", price: 213))
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
