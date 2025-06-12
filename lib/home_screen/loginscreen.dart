@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login/entities/users.dart';
 import 'package:go_router/go_router.dart';
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:2329431869.
-import 'package:flutter_login/entities/users.dart';'
 
 List<User> usuarios = [
   User(
